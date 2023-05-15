@@ -7,7 +7,10 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('auth/', include('autenticacao.urls')),
-    path('', include('plataforma.urls'))
+    path('', include('plataforma.urls')),
+    #adicionado para o botão SAIR em agendamento
+    path('sair/', include('autenticacao.urls')),
+
 
 ]
 

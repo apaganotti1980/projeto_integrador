@@ -65,5 +65,11 @@ def cancelar_agendamento(request, id):
     visitas.save()
     return redirect('/agendamentos')
 
+def sair(request):
+    auth.logout(request)
+    return redirect('/auth/logar')
+
+
+
  
 

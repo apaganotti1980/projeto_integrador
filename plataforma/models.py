@@ -28,9 +28,9 @@ class Imovei(models.Model):
     choices_imovel = (('A', 'Apartamento'),
             ('C', 'Casa'))
     imagens = models.ManyToManyField(Imagem)
-    valor = models.FloatField()
+    valor = models.DecimalField(max_digits=8,decimal_places=2)
     quartos = models.IntegerField()
-    tamanho = models.FloatField()
+    tamanho = models.DecimalField(max_digits=8,decimal_places=2)
     cidade = models.ForeignKey(Cidade, on_delete=models.DO_NOTHING)
     rua = models.CharField(max_length=50)
     tipo = models.CharField(max_length=1, choices=choices)
